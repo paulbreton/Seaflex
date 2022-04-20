@@ -22,7 +22,7 @@ return new class extends Migration
             $table->string('mineur');
 
             $table->primary(['annee', 'semestre', 'code_parcours']);
-            $table->foreign('code_parcours')->references('code')->on('parcours')->onDelete('cassade');
+            $table->foreign('code_parcours')->references('code')->on('parcours')->onDelete('cascade');
         });
     }
 

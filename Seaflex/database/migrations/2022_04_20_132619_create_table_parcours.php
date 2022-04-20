@@ -16,6 +16,8 @@ return new class extends Migration
         Schema::create('parcours', function (Blueprint $table) {
             $table->string('code');
             $table->string('libelle');
+
+            $table->primary('code');
         });
     }
 
