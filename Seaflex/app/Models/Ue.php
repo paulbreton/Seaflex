@@ -13,9 +13,13 @@ class Ue extends Model
     /**
      * @return array
      */
-    public function modules()
+    public function modules() :array
     {
-        return DB::select('select * from ue_content where code_ue = ?', [$this->code]);
+        return DB::select("SELECT m.*
+                                 FROM ue
+                                 INNER JOIN ue_content as uc on uc.code_ue = ue.code
+                                 INNER JOIN module as m on m.code = uc.code_module
+                                 WHERE ue.code = ?", [$this->code]);
     }
 
     /**
