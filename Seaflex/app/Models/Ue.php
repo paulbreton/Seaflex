@@ -29,4 +29,14 @@ class Ue extends Model
     {
         return $this->belongsToMany(Parcours::class, 'parcours_ue', 'code', 'code_ue');
     }
+
+    /**
+     * @return integer
+     */
+    public function nbEtudiantsInscrit()
+    {
+        return DB::scalar('SELECT count(*)
+                                 FROM inscrit
+                                 WHERE code_ue = ?', [$this->code]);
+    }
 }
