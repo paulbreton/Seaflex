@@ -3,19 +3,29 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasOne;
+use Illuminate\Support\Facades\DB;
 
 class Etudiant extends Model
 {
 
     protected $table = "etudiant";
+
     /**
-     * @return HasMany
+     * @return BelongsTo
      */
-    public function cesures() :HasMany
+    public function cesures() :BelongsTo
     {
-        return $this->hasMany(Cesure::class);
+        return $this->belongsTo(Cesure::class, 'code', 'code_etudiant');
+    }
+
+    /**
+     * @return array
+     */
+    public function inscrit()
+    {
+        return DB::select('select * from inscrit where code_etudiant = ?', [$this->code]);
     }
 
     /**

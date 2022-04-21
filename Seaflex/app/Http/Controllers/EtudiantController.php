@@ -8,8 +8,10 @@ use App\Models\Etudiant;
 class EtudiantController extends Controller
 {
     public function index() {
-        $etudiants = EtudiantRessource::collection(Etudiant::all());
+        return EtudiantRessource::collection(Etudiant::all());
+    }
 
-        return $etudiants;
+    public function show($code) {
+        return EtudiantRessource::make(Etudiant::where('code', $code)->first());
     }
 }

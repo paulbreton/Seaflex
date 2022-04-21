@@ -2,6 +2,7 @@
 
 namespace App\Http\Resources;
 
+use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 
 class EtudiantRessource extends JsonResource
@@ -9,7 +10,7 @@ class EtudiantRessource extends JsonResource
     /**
      * Transform the resource into an array.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  Request  $request
      * @return array
      */
     public function toArray($request)
@@ -20,6 +21,8 @@ class EtudiantRessource extends JsonResource
             'prenom' => $this->prenom,
             'parcours' => ParcoursRessource::make($this->parcours),
             'date' => $this->date,
+            'inscrit' => $this->inscrit(),
+            'cesure' => $this->cesures
         ];
     }
 }
