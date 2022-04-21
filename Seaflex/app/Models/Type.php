@@ -5,13 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
-class Cesure extends Model
+class Type extends Model
 {
     /**
      * @return BelongsTo
      */
-    public function etudiant() :BelongsTo
+    public function parcours() :BelongsTo
     {
-        return $this->belongsTo(Etudiant::class, 'code_etudiant', 'code');
+        return $this->belongsTo(Parcours::class, 'code', 'code_parcours');
     }
 }
