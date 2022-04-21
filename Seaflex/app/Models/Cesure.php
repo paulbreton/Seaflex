@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Cesure extends Model
 {
+    protected $table = 'cesure';
+
     /**
      * @return BelongsTo
      */
