@@ -23,6 +23,8 @@ return new class extends Migration
 
             $table->primary(['annee', 'semestre', 'code_parcours']);
             $table->foreign('code_parcours')->references('code')->on('parcours')->onDelete('cascade');
+            $table->foreign('majeur')->references('ue')->on('code');
+            $table->foreign('mineur')->references('ue')->on('code');
         });
     }
 
