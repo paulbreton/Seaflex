@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Projet Seaflex - Ajouter étudiant </title>
+        <title>Projet Seaflex - Fiche étudiant </title>
         <!-- Bootstrap CSS -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
@@ -21,16 +21,16 @@
                 height: 100vh;
             }
             li{
-                            list-style:none;
-                        }
+                list-style:none;
+            }
+            h4{
+                color:#0d6efd;
+            }
             .buttonInd {
                 height: 100%;
                 display: flex;
                 flex-direction: column;
-                justify-content: center;
-                align-items: center;
             }
-
             .btn {
                 height: fit-content;
                 width: 20rem;
@@ -39,7 +39,7 @@
             #formContent {
                 -webkit-border-radius: 10px 10px 10px 10px;
                 width: 90%;
-                max-width: 450px;
+                max-width: 1200px;
                 -webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
                 padding:1rem;
               }
@@ -49,7 +49,7 @@
                   align-items: center;
                   justify-content: center;
                   width: 100%;
-                  min-height: 100%;
+                  //min-height: 100%;
                   padding: 20px;
                 }
         </style>
@@ -83,54 +83,68 @@
           </div>
         </nav>
         </header>
+        <!-- PREMIERE ANNEE -->
         <div class="wrapper">
+        <h4>PREMIERE ANNEE</h4>
             <div id="formContent" class="buttonInd">
-                <form>
-                  <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Nom</label>
-                    <input type="name" class="form-control" placeholder="Nom" id="exampleInputEmail1" aria-describedby="emailHelp">
-                  </div>
-                  <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">Prénom</label>
-                    <input type="name" class="form-control" placeholder="Prenom" id="exampleInputPassword1">
-                  </div>
-                  <label for="exampleInputPassword1" class="form-label">Parcours</label>
-                  <div class="input-group">
-                    <select class="form-select" id="inputGroupSelect04" aria-label="Example select with button addon">
-                      <option selected>Choix de parcours...</option>
-                      <option value="IMR">IMR</option>
-                      <option value="Phot.">Phot.</option>
-                      <option value="Info.">Info.</option>
-                      <option value="Snum.">Snum.</option>
-                    </select>
-                  </div>
-                  <br>
-                  <label for="exampleInputPassword1" class="form-label">Année en cours</label>
-                    <div class="input-group">
-                      <select class="form-select" id="inputGroupSelect04" aria-label="Example select with button addon">
-                         <option selected>Année...</option>
-                         <option value="2019-20">2019-20</option>
-                         <option value="2020-21">2020-21</option>
-                         <option value="2021-22">2021-22</option>
-                         <option value="2022-23">2022-23</option>
-                      </select>
-                    </div>
-                  <br>
-                  <label for="exampleInputPassword1" class="form-label">Semestre en cours</label>
-                    <div class="input-group">
-                      <select class="form-select" id="inputGroupSelect06" aria-label="Example select with button addon">
-                         <option selected>Semestre...</option>
-                         <option value="1">1</option>
-                         <option value="2">2<option>
-                         <option value="3">3<option>
-                         <option value="4">4<option>
-                         <option value="5">5<option>
-                         <option value="6">6<option>
-                      </select>
-                    </div>
-                  <button type="submit" class="btn btn-primary">Ajouter</button>
-                </form>
-            <div>
+               <table class="table table-hover">
+                  <thead>
+                    <tr>
+                      <th scope="col">Premier Semestre</th>
+                      <th scope="col">Second Semestre</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><p>Module Majeur</p><br><p>Module Mineur</p><br><p>Cesure</p></td>
+                      <td><p>Module Majeur</p><br><p>Module Mineur</p><br><p>Cesure</p></td>
+                    </tr>
+                  </tbody>
+               </table>
+            </div>
         </div>
+
+        <!-- DEUXIEME ANNEE -->
+        <div class="wrapper">
+                <h4>DEUXIEME ANNEE</h4>
+                    <div id="formContent" class="buttonInd">
+                       <table class="table table-hover">
+                          <thead>
+                            <tr>
+                              <th scope="col">troisième Semestre</th>
+                              <th scope="col">quatrième Semestre</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td><p>Module Majeur</p><br><p>Module Mineur</p><br><p>Cesure</p></td>
+                              <td><p>Module Majeur</p><br><p>Module Mineur</p><br><p>Cesure</p></td>
+                            </tr>
+                          </tbody>
+                       </table>
+                    </div>
+                </div>
+        <!-- TROISIEME ANNEE -->
+        <div class="wrapper">
+                <h4>TROISIEME ANNEE</h4>
+                    <div id="formContent" class="buttonInd">
+                       <table class="table table-hover">
+                          <thead>
+                            <tr>
+                              <th scope="col">cinquième Semestre</th>
+                              <th scope="col">sixième Semestre</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td><p>Module Majeur</p><br><p>Module Mineur</p><br><p>Cesure</p></td>
+                              <td><p>Module Majeur</p><br><p>Module Mineur</p><br><p>Cesure</p></td>
+                            </tr>
+                          </tbody>
+                       </table>
+                    </div>
+                </div>
+
+
     </body>
 </html>

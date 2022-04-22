@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Projet Seaflex - Ajouter étudiant </title>
+        <title>Projet Seaflex - Liste Etudiants </title>
         <!-- Bootstrap CSS -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
@@ -20,26 +20,25 @@
                 font-family: 'Nunito', sans-serif;
                 height: 100vh;
             }
-            li{
-                            list-style:none;
-                        }
             .buttonInd {
-                height: 100%;
+                height: 80%;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
             }
-
+            li{
+                list-style:none;
+            }
             .btn {
                 height: fit-content;
-                width: 20rem;
-                margin: 1rem 0;
+                width: 6rem;
+                margin: 0.1rem 0;
             }
             #formContent {
                 -webkit-border-radius: 10px 10px 10px 10px;
                 width: 90%;
-                max-width: 450px;
+                max-width: 1200px;
                 -webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
                 padding:1rem;
               }
@@ -56,80 +55,59 @@
     </head>
     <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-          <div class="container-fluid">
-            <a class="navbar-brand" href="index">SchoFlex</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                  <a class="nav-link" aria-current="page" href="etudiants">Liste des Etudiants</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="add">Ajouter un Etudiant</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="parcours">Parcours</a>
-                </li>
-              </ul>
-              <form class="d-flex">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index">SchoFlex</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="etudiants">Liste des Etudiants</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="add">Ajouter un Etudiant</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="parcours">Parcours</a>
+            </li>
+          </ul>
+          <form class="d-flex">
                 <li class="nav-item">
                   <a class="nav-link" href="view">View</a>
                 </li>
               </form>
-            </div>
-          </div>
-        </nav>
-        </header>
+        </div>
+      </div>
+    </nav>
+    </header>
         <div class="wrapper">
             <div id="formContent" class="buttonInd">
-                <form>
-                  <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Nom</label>
-                    <input type="name" class="form-control" placeholder="Nom" id="exampleInputEmail1" aria-describedby="emailHelp">
-                  </div>
-                  <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">Prénom</label>
-                    <input type="name" class="form-control" placeholder="Prenom" id="exampleInputPassword1">
-                  </div>
-                  <label for="exampleInputPassword1" class="form-label">Parcours</label>
-                  <div class="input-group">
-                    <select class="form-select" id="inputGroupSelect04" aria-label="Example select with button addon">
-                      <option selected>Choix de parcours...</option>
-                      <option value="IMR">IMR</option>
-                      <option value="Phot.">Phot.</option>
-                      <option value="Info.">Info.</option>
-                      <option value="Snum.">Snum.</option>
-                    </select>
-                  </div>
-                  <br>
-                  <label for="exampleInputPassword1" class="form-label">Année en cours</label>
-                    <div class="input-group">
-                      <select class="form-select" id="inputGroupSelect04" aria-label="Example select with button addon">
-                         <option selected>Année...</option>
-                         <option value="2019-20">2019-20</option>
-                         <option value="2020-21">2020-21</option>
-                         <option value="2021-22">2021-22</option>
-                         <option value="2022-23">2022-23</option>
-                      </select>
-                    </div>
-                  <br>
-                  <label for="exampleInputPassword1" class="form-label">Semestre en cours</label>
-                    <div class="input-group">
-                      <select class="form-select" id="inputGroupSelect06" aria-label="Example select with button addon">
-                         <option selected>Semestre...</option>
-                         <option value="1">1</option>
-                         <option value="2">2<option>
-                         <option value="3">3<option>
-                         <option value="4">4<option>
-                         <option value="5">5<option>
-                         <option value="6">6<option>
-                      </select>
-                    </div>
-                  <button type="submit" class="btn btn-primary">Ajouter</button>
-                </form>
+                <table class="table table-hover">
+                  <thead>
+                    <tr>
+                      <th scope="col">Code Parcours</th>
+                      <th scope="col">Semestre</th>
+                      <th scope="col">Période</th>
+                      <th scope="col">Année</th>
+                      <th scope="col">Majeur</th>
+                      <th scope="col">Mineur</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                        <tr>
+                          <th scope="row"></th>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td> <a href="liste"><button class="btn btn-primary" type="button">modifier</button> <button class="btn btn-danger" type="button">supprimer</button> </td>
+                        </tr>
+                  </tbody>
+                </table>
             <div>
         </div>
     </body>

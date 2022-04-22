@@ -8,7 +8,7 @@ use App\Models\Etudiant;
 class EtudiantController extends Controller
 {
     public function index() {
-        return EtudiantRessource::collection(Etudiant::all());
+        return view('listeEtu', ['etudiants' => EtudiantRessource::collection(Etudiant::all())]);
     }
 
     public function show($code) {

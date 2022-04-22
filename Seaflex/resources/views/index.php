@@ -54,7 +54,7 @@
     <body>
         <div class="wrapper">
             <div id="formContent" class="buttonInd">
-                <a href="liste"><button class="btn btn-dark" type="button"><b>Liste des Etudiants</b></button>
+                <a href="etudiants"><button class="btn btn-dark" type="button"><b>Liste des Etudiants</b></button>
                 <a href="add"><button class="btn btn-dark" type="button"><b>Ajouter des Etudiants</b></button>
                 <a href="parcours"><button class="btn btn-dark" type="button"><b>Visualiser les Parcours</b></button>
             <div>

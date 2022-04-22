@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\EtudiantController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,9 +17,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('index');
 });
-Route::get('/liste', function () {
-    return view('listeEtu');
-});
+Route::get('/etudiants', [EtudiantController::class, 'index']);
+
 Route::get('/add', function () {
     return view('addEtu');
 });
@@ -27,4 +27,19 @@ Route::get('/parcours', function () {
 });
 Route::get('/index', function () {
     return view('index');
+});
+Route::get('/ue', function () {
+    return view('listeUE');
+});
+Route::get('/imr', function () {
+    return view('imr');
+});
+Route::get('/etu', function () {
+    return view('FicheEtu');
+});
+Route::get('/historique', function () {
+    return view('historique');
+});
+Route::get('/view', function () {
+    return view('PageView');
 });

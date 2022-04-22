@@ -27,7 +27,9 @@
                 justify-content: center;
                 align-items: center;
             }
-
+            li{
+                            list-style:none;
+                        }
             .btn {
                 height: fit-content;
                 width: 6rem;
@@ -62,7 +64,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="liste">Liste des Etudiants</a>
+              <a class="nav-link" aria-current="page" href="etudiants">Liste des Etudiants</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="add">Ajouter un Etudiant</a>
@@ -72,9 +74,10 @@
             </li>
           </ul>
           <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-          </form>
+                <li class="nav-item">
+                  <a class="nav-link" href="view">View</a>
+                </li>
+              </form>
         </div>
       </div>
     </nav>
@@ -94,54 +97,16 @@
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
-                      <th scope="row">1</th>
-                      <td>Clément</td>
-                      <td>Tyne</td>
-                      <td>172 263</td>
-                      <td> Phot. </td>
-                      <td> <a href="liste"><button class="btn btn-primary" type="button">modifier</button> <button class="btn btn-danger" type="button">supprimer</button> </td>
-                    </tr>
-                    <tr>
-                      <th scope="row">2</th>
-                      <td>Marie</td>
-                      <td>Nière</td>
-                      <td>253 392</td>
-                      <td> IMR </td>
-                      <td> <a href="liste"><button class="btn btn-primary" type="button">modifier</button> <button class="btn btn-danger" type="button">supprimer</button> </td>
-                    </tr>
-                    <tr>
-                      <th scope="row">3</th>
-                      <td>Louis</td>
-                      <td>Fine</td>
-                      <td>638 162</td>
-                      <td>Info.</td>
-                      <td> <a href="liste"><button class="btn btn-primary" type="button">modifier</button> <button class="btn btn-danger" type="button">supprimer</button> </td>
-                    </tr>
-                    <tr>
-                      <th scope="row">3</th>
-                      <td>Louis</td>
-                      <td>Fine</td>
-                      <td>638 162</td>
-                      <td>Info.</td>
-                      <td> <a href="liste"><button class="btn btn-primary" type="button">modifier</button> <button class="btn btn-danger" type="button">supprimer</button> </td>
-                    </tr>
-                      <tr>
-                      <th scope="row">3</th>
-                      <td>Louis</td>
-                      <td>Fine</td>
-                      <td>638 162</td>
-                      <td>Info.</td>
-                      <td> <a href="liste"><button class="btn btn-primary" type="button">modifier</button> <button class="btn btn-danger" type="button">supprimer</button> </td>
-                    </tr>
-                    <tr>
-                      <th scope="row">3</th>
-                      <td>Louis</td>
-                      <td>Fine</td>
-                      <td>638 162</td>
-                      <td>Info.</td>
-                      <td> <a href="liste"><button class="btn btn-primary" type="button">modifier</button> <button class="btn btn-danger" type="button">supprimer</button> </td>
-                    </tr>
+                      <?php foreach($etudiants as $etudiant): ?>
+                        <tr>
+                          <th scope="row"></th>
+                          <td><?= $etudiant->prenom; ?></td>
+                          <td><?= $etudiant->nom; ?></td>
+                          <td><?= $etudiant->code; ?></td>
+                          <td> <?= $etudiant->parcours->libelle; ?> </td>
+                          <td> <a href="etu"><button class="btn btn-primary" type="button">modifier</button> <button class="btn btn-danger" type="button">supprimer</button> </td>
+                        </tr>
+                      <?php endforeach; ?>
                   </tbody>
                 </table>
             <div>
