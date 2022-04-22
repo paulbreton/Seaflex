@@ -19,8 +19,8 @@ return new class extends Migration
             $table->string('libellé');
             $table->boolean('impaire');
             $table->boolean('paire');
-            $table->string('capacité');
-            $table->enum('ects',[9,21]);
+            $table->integer('capacité');
+            $table->integer('ects');
             $table->primary('code');
         });
     }
