@@ -14,5 +14,17 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
+});
+Route::get('/liste', function () {
+    return view('listeEtu');
+});
+Route::get('/add', function () {
+    return view('addEtu');
+});
+Route::get('/parcours', function () {
+    return view('parcours');
+});
+Route::get('/index', function () {
+    return view('index');
 });
