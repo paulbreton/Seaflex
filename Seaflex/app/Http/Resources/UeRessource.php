@@ -22,9 +22,9 @@ class UeRessource extends JsonResource
             'impair' => $this->impaire,
             'pair' => $this->paire,
             'capacite' => $this->capacité,
+            'nbInscrit' => $this->nbEtudiantsInscrit(),
             'ects' => $this->ects,
-            'modules' => $this->modules(),
-            'nbInscrit' => $this->nbEtudiantsInscrit()
+            'modules' => $this->modules()
         ];
     }
 }
