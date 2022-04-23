@@ -12,6 +12,6 @@ class EtudiantController extends Controller
     }
 
     public function show($code) {
-        return EtudiantRessource::make(Etudiant::where('code', $code)->first());
+        return view('ficheEtu', ['etudiant' => EtudiantRessource::make(Etudiant::where('code', $code)->first())]);
     }
 }

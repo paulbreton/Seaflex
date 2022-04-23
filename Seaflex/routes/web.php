@@ -1,7 +1,10 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EtudiantController;
+use App\Http\Controllers\ParcoursController;
+use App\Http\Controllers\UeController;
+use App\Http\Controllers\ViewsController;
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,11 +16,26 @@ use App\Http\Controllers\EtudiantController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+/*
+Route::get('/etudiants', [EtudiantController::class, 'index']);
+Route::get('/etudiants/{etudiant}', [EtudiantController::class, 'show']);
+
+Route::get('/ue', [UeController::class, 'index']);
+Route::get('/ue/{ue}', [UeController::class, 'show']);
+
+Route::get('/parcours', [ParcoursController::class, 'index']);
+Route::get('/parcours/{parcours}', [ParcoursController::class, 'show']);
+
+Route::get('/views', [ViewsController::class, 'index']);*/
 
 Route::get('/', function () {
     return view('index');
 });
 Route::get('/etudiants', [EtudiantController::class, 'index']);
+Route::get('/etudiant/{etudiant}', [EtudiantController::class, 'show']);
+Route::get('/etudiant/historique/{etudiant}', function () {
+    return view('historique');
+});
 
 Route::get('/add', function () {
     return view('addEtu');
@@ -33,12 +51,6 @@ Route::get('/ue', function () {
 });
 Route::get('/imr', function () {
     return view('imr');
-});
-Route::get('/etu', function () {
-    return view('FicheEtu');
-});
-Route::get('/historique', function () {
-    return view('historique');
 });
 Route::get('/view', function () {
     return view('PageView');
