@@ -1,28 +1,33 @@
 <?php include_once("header.php") ?>
-    <div class="wrapper-parcours">
-        <div id="formContent-parcours" class="buttonInd">
-            <form name="parcours.php">
-              <label for="exampleInputPassword1" class="form-label">Parcours</label>
-              <div class="input-group">
-                <select class="form-select" id="parcours_select" aria-label="Example select with button addon" onchange="change_valeur();">
-                  <option selected>Choix de parcours...</option>
-                  <option value="IMR">IMR</option>
-                  <option value="Phot.">Phot.</option>
-                  <option value="Info.">Info.</option>
-                </select>
-              </div>
-              <button type="submit" class="btn btn-parcours btn-primary">Rechercher</button>
-            </form>
-        <div>
-    </div>
-    <script>
-        function change_valeur() {
-            select = document.getElementById("parcours_select");
-            choice = select.selectedIndex;
-            valeur = select.options[choice].value;
-            texte = select.options[choice].text;
-            console.log(texte);
-            console.log(valeur);
-        }
-    </script>
+<div class="wrapper-parcours-show">
+    <div id="formContent-parcours-show" class="buttonInd">
+        <h4><?php echo $parcours->libelle ?></h4>
+        <div>Liste des Ue</div>
+        <?php if ($types !== []):?>
+            <table>
+                <thead>
+                <tr>
+                    <th>Année</th>
+                    <th>Semestre</th>
+                    <th>Ue majeur</th>
+                    <th>Ue mineur</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <?php foreach ($types as $type): ?>
+                        <tr>
+                            <td><?php echo $type->annee ?></td>
+                            <td><?php echo $type->semestre ?></td>
+                            <td><?php echo $type->majeur ?></td>
+                            <td><?php echo $type->mineur ?></td>
+                        </tr>
+                    <?php endforeach ?>
+                </tbody>
+            </table>
+        <?php else: ?>
+            <i>Pas d'UE</i>
+        <?php endif; ?>
+    <div>
+</div>
 <?php include_once("footer.php") ?>
+

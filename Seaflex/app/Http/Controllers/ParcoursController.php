@@ -8,10 +8,12 @@ use App\Models\Parcours;
 class ParcoursController extends Controller
 {
     public function index() {
-        return ParcoursRessource::collection(Parcours::all());
+        return view('searchParcours', ['parcours' => ParcoursRessource::collection(Parcours::all())]);
     }
 
     public function show($code) {
-        return ParcoursRessource::make(Parcours::where('code', $code)->first());
+        $parcours = Parcours::where('code', $code)->first();
+        $types = $parcours->types();
+        return view('parcours', ['parcours' => $parcours, 'types' => $types]);
     }
 }

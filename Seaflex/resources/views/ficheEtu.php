@@ -8,7 +8,7 @@
           <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label"><u>Prénom:</u></label><p><i><?= $etudiant->prenom; ?></i></p>
           </div>
-          <label for="exampleInputPassword1" class="form-label"><u>Parcours:</u> (<a href="parcours">visualiser les parcours</a>)</label><p><i><a href="imr"><?= $etudiant->parcours->libelle; ?></a></i></p>
+          <label for="exampleInputPassword1" class="form-label"><u>Parcours:</u> (<a href="<?php echo url(env('APP_URL').'/parcours') ?>">visualiser les parcours</a>)</label><p><i><a href="<?php echo url(env('APP_URL').'/parcours/'.$etudiant->parcours->code) ?>"><?= $etudiant->parcours->libelle; ?></a></i></p>
           <label for="exampleInputPassword1" class="form-label"><u>Année en cours:</u></label><p><i>2021-22</i></p>
           <label for="exampleInputPassword1" class="form-label"><u>Semestre en cours:</u></label><p><i>1</i></p>
           <label class="historique"><a href="<?php echo url(env('APP_URL').'/etudiant/historique/'.$etudiant->code) ?>"><button class="btn btn-ficheEtu btn-primary" type="button">Voir l'historique</button></label>

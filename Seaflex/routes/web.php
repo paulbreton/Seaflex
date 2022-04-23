@@ -23,8 +23,8 @@ Route::get('/etudiants/{etudiant}', [EtudiantController::class, 'show']);
 Route::get('/ue', [UeController::class, 'index']);
 Route::get('/ue/{ue}', [UeController::class, 'show']);
 
-Route::get('/parcours', [ParcoursController::class, 'index']);
-Route::get('/parcours/{parcours}', [ParcoursController::class, 'show']);
+
+
 
 Route::get('/views', [ViewsController::class, 'index']);*/
 
@@ -40,9 +40,9 @@ Route::get('/etudiant/historique/{etudiant}', function () {
 Route::get('/add', function () {
     return view('addEtu');
 });
-Route::get('/parcours', function () {
-    return view('parcours');
-});
+Route::get('/parcours', [ParcoursController::class, 'index']);
+Route::get('/parcours/{parcours}', [ParcoursController::class, 'show']);
+
 Route::get('/index', function () {
     return view('index');
 });

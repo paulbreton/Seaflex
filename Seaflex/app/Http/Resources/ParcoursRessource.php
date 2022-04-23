@@ -18,7 +18,6 @@ class ParcoursRessource extends JsonResource
         return [
             'code' => $this->code,
             'libelle' => $this->libelle,
-            'type' => $this->types()
         ];
     }
 }
