@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('module', function (Blueprint $table) {
             $table->string('code');
             $table->string('libellé');
-            $table->string('commentaire');
+            $table->string('commentaire')->nullable();
             $table->primary('code');
         });
     }

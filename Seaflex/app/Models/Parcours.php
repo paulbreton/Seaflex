@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Support\Facades\DB;
 
 class Parcours extends Model
 {
@@ -15,12 +16,15 @@ class Parcours extends Model
     {
         return $this->hasMany(Etudiant::class);
     }
+
     /**
-     * @return HasMany
+     * @return array
      */
-    public function types() :HasMany
+    public function types() :array
     {
-        return $this->hasMany(Type::class);
+        return DB::select("SELECT *
+                                       FROM type
+                                       WHERE code_parcours = ?", [$this->code]);
     }
 
     /**
