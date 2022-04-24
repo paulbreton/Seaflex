@@ -23,10 +23,7 @@ Route::get('/etudiants/{etudiant}', [EtudiantController::class, 'show']);
 Route::get('/ue', [UeController::class, 'index']);
 Route::get('/ue/{ue}', [UeController::class, 'show']);
 
-
-
-
-Route::get('/views', [ViewsController::class, 'index']);*/
+*/
 
 Route::get('/', function () {
     return view('index');
@@ -52,6 +49,4 @@ Route::get('/ue', function () {
 Route::get('/imr', function () {
     return view('imr');
 });
-Route::get('/view', function () {
-    return view('PageView');
-});
+Route::get('/views', [ViewsController::class, 'index']);

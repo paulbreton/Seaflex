@@ -48,7 +48,7 @@
                 </ul>
                 <form class="d-flex">
                     <li class="nav-item">
-                        <a class="nav-link" href="view">View</a>
+                        <a class="nav-link" href="<?php echo url(env('APP_URL').'/views') ?>">View</a>
                     </li>
                 </form>
             </div>
