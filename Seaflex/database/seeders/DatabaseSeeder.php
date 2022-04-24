@@ -18,6 +18,7 @@ class DatabaseSeeder extends Seeder
             ParcoursSeeder::class,
             typeSeeder::class,
             EtudiantSeeder::class,
+            InscritSeeder::class,
         ]);
     }
 }
