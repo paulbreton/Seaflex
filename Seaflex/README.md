@@ -5,7 +5,7 @@ Seaflex est une application permettant de gérer les parcours des étudiants de 
 # Pré-requis
 
 * composer
-* php
+* php 8
 * Base de donnée Mysql nommé `Seaflex`
 
 # Installation
