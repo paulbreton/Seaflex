@@ -1,25 +1,9 @@
 # Seaflex
 
-Seaflex est une application permettant de gérer les parcours des étudiants de l'école d'ingérieur ENSSAT à Lannion.
+Scoflex est une application permettant de gérer les parcours des étudiants de l'école d'ingérieur ENSSAT à Lannion.
 
-# Pré-requis
+# Contenu de l'archive
 
-* composer
-* php
-* Base de donnée Mysql nommé `Seaflex`
+Cette archive contient le répertoire seaflex qui est le projet. Toutes les commandes pour lancer le projet sont dans le README à la racine de ce dernier.
 
-# Installation
-
-``` 
-git clone
-
-composer install
-
-php artisan migrate
-
-php artisan db:seed
-
-php artisan serve
-```
-
-Ensuite rendez-vous sur à l'adresse: `http://localhost:8000/`
+C'est une application laravel, il faut donc avoir php en version 8 et composer d'installer pour pouvoir lancer l'application
