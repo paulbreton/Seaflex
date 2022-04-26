@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('nom');
             $table->string('prenom');
             $table->date('date');
+            $table->boolean('up_validé');
             $table->primary('code');
         });
     }
