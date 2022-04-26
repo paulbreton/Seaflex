@@ -18,7 +18,8 @@ return new class extends Migration
             $table->string('code_etudiant');
             $table->integer('annee');
             $table->enum('semestre', ['pair', 'impair']);
-            $table->boolean('valide');
+            $table->boolean('valide')->nullable();
+            $table->date('date')->nullable();
 
             $table->primary(['code_ue', 'code_etudiant', 'annee', 'semestre']);
 

@@ -21,6 +21,7 @@ return new class extends Migration
             $table->boolean('paire');
             $table->integer('capacité');
             $table->integer('ects');
+            $table->string('responsable')->nullable();
             $table->primary('code');
         });
     }
