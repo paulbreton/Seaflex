@@ -10,6 +10,8 @@ use Illuminate\Support\Facades\DB;
 class Parcours extends Model
 {
     /**
+     * Liste des étudiants de ce parcours
+     *
      * @return HasMany
      */
     public function etudiants() :HasMany
@@ -18,6 +20,8 @@ class Parcours extends Model
     }
 
     /**
+     * Liste des types de ce parcours
+     *
      * @return array
      */
     public function types() :array
@@ -28,6 +32,8 @@ class Parcours extends Model
     }
 
     /**
+     * Liste des ue où ce parcours est présent via la table d'association parcours_ue
+     *
      * @return BelongsToMany
      */
     public function ue() :BelongsToMany

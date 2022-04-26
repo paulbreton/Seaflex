@@ -5,12 +5,15 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Support\Facades\DB;
+use phpDocumentor\Reflection\Types\Integer;
 
 class Ue extends Model
 {
     protected $table = 'ue';
 
     /**
+     * Liste des Modules liés à une UE
+     *
      * @return array
      */
     public function modules() :array
@@ -23,6 +26,8 @@ class Ue extends Model
     }
 
     /**
+     * Liste des parcours où cette UE est présente via la table d'association parcours_ue
+     *
      * @return BelongsToMany
      */
     public function parcours() :BelongsToMany
@@ -31,9 +36,11 @@ class Ue extends Model
     }
 
     /**
-     * @return integer
+     * Compte le nombre de d'étudiant inscrit dans cette UE
+     *
+     * @return Integer
      */
-    public function nbEtudiantsInscrit()
+    public function nbEtudiantsInscrit() :Integer
     {
         return DB::scalar('SELECT count(*)
                                  FROM inscrit

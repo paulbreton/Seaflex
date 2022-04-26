@@ -13,6 +13,8 @@ class Etudiant extends Model
     protected $table = "etudiant";
 
     /**
+     * Liste des cesures de cet étudiant
+     *
      * @return BelongsTo
      */
     public function cesures() :BelongsTo
@@ -21,6 +23,8 @@ class Etudiant extends Model
     }
 
     /**
+     * Liste des ue où cet étudiant est inscrit
+     *
      * @return array
      */
     public function inscrit()
@@ -29,6 +33,8 @@ class Etudiant extends Model
     }
 
     /**
+     * Parcours choisi
+     *
      * @return HasOne
      */
     public function parcours() :HasOne
