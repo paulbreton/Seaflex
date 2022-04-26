@@ -15,7 +15,7 @@ return new class extends Migration
     public function up()
     {
         DB::statement('CREATE VIEW VueInscritsUnite AS
-                             SELECT code_ue, annee, count(code_etudiant)
+                             SELECT code_ue, annee, count(code_etudiant) as nombreEtudiant
                              FROM inscrit
                              GROUP BY code_ue, annee');
     }
