@@ -40,11 +40,14 @@
                 -webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
                 padding:1rem;
               }
-
+            img {
+                width: 20rem;
+            }
               .wrapper {
                   display: flex;
                   align-items: center;
                   justify-content: center;
+                  flex-direction: column;
                   width: 100%;
                   min-height: 100%;
                   padding: 20px;
@@ -52,7 +55,9 @@
         </style>
     </head>
     <body>
+
         <div class="wrapper">
+            <img src="<?php echo asset('logo/seaflex.jpg') ?> " alt="description of myimage">
             <div id="formContent" class="buttonInd">
                 <a href="etudiants"><button class="btn btn-dark" type="button"><b>Liste des Etudiants</b></button>
                 <a href="add"><button class="btn btn-dark" type="button"><b>Ajouter des Etudiants</b></button>
