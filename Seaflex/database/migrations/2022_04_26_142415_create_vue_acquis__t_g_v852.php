@@ -18,7 +18,7 @@ return new class extends Migration
         DB::statement("CREATE VIEW VueAcquisTGV852 AS
                              SELECT *
                              FROM inscrit
-                             WHERE code_etudiant = 'TGV852' and tentative = 0");
+                             WHERE code_etudiant = 'TGV852' and (valide = 1 or valide IS NULL)");
     }
 
     /**
