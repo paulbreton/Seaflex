@@ -1,0 +1,218 @@
+body {
+    font-family: 'Nunito', sans-serif;
+    height: 100vh;
+}
+li{
+    list-style:none;
+}
+
+/**
+FICHER ETUDIANT
+ */
+.buttonInd-ficheEtu {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.historique {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn-ficheEtu {
+    height: fit-content;
+    width: 20rem;
+    margin: 1rem 0;
+}
+#formContent-ficheEtu {
+    -webkit-border-radius: 10px 10px 10px 10px;
+    width: 90%;
+    max-width: 450px;
+    -webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+    padding:1rem;
+}
+
+.wrapper-ficheEtu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100%;
+    padding: 20px;
+}
+/* =================================================== */
+
+
+/**
+    ListeEtu
+ */
+
+.btn-listeEtu {
+    height: fit-content;
+    width: 6rem;
+    margin: 0.1rem 0;
+}
+#formContent-listeEtu {
+    -webkit-border-radius: 10px 10px 10px 10px;
+    width: 90%;
+    max-width: 1200px;
+    -webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+    padding:1rem;
+}
+
+.wrapper-listeEtu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100%;
+    padding: 20px;
+}
+/* ========================================================== */
+
+/**
+    ADD
+ */
+.buttonInd {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-add {
+    height: fit-content;
+    width: 20rem;
+    margin: 1rem 0;
+}
+#formContent-add {
+    -webkit-border-radius: 10px 10px 10px 10px;
+    width: 90%;
+    max-width: 450px;
+    -webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+    padding:1rem;
+}
+
+.wrapper-add {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100%;
+    padding: 20px;
+}
+/* =========================================================== */
+
+/**
+    historique
+ */
+h4{
+    color:#0d6efd;
+}
+.buttonInd-historique {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.btn-historique {
+    height: fit-content;
+    width: 20rem;
+    margin: 1rem 0;
+}
+#formContent-historique {
+    -webkit-border-radius: 10px 10px 10px 10px;
+    width: 90%;
+    max-width: 1200px;
+    -webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+    padding:1rem;
+}
+
+.wrapper-historique {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 20px;
+}
+/* ============================================ */
+
+/**
+    Liste parcours
+ */
+.btn-parcours {
+    height: fit-content;
+    width: 100%;
+    margin: 1rem 0;
+}
+#formContent-parcours {
+    -webkit-border-radius: 10px 10px 10px 10px;
+    width: 90%;
+    max-width: 450px;
+    -webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+    padding:1rem;
+}
+
+.wrapper-parcours {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100%;
+    padding: 20px;
+}
+/* ================================================ */
+
+
+/**
+    Parcours
+ */
+#formContent-parcours-show {
+    -webkit-border-radius: 10px 10px 10px 10px;
+    width: 90%;
+    max-width: 450px;
+    -webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+    padding:1rem;
+}
+
+.wrapper-parcours-show {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100%;
+    padding: 20px;
+}
+
+/* ================================================== */
+
+/**
+    View
+ */
+/**
+    Parcours
+ */
+#formContent-view {
+    -webkit-border-radius: 10px 10px 10px 10px;
+    width: 90%;
+    max-width: 450px;
+    -webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+    padding:1rem;
+}
+
+.btn-view {
+    margin: 1rem;
+    width: 100%;
+}
+
+.wrapper-view {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 20px;
+}
+
+.table-view {
+    margin: 2rem;
+}

@@ -13,14 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('failed_jobs', function (Blueprint $table) {
-            $table->id();
-            $table->string('uuid')->unique();
-            $table->text('connection');
-            $table->text('queue');
-            $table->longText('payload');
-            $table->longText('exception');
-            $table->timestamp('failed_at')->useCurrent();
+        Schema::create('cesure', function (Blueprint $table) {
+            $table->string('code_etudiant');
+            $table->foreign('code_etudiant')->references('code')->on('etudiant')->onDelete('cascade');;
+            $table->integer('annee');
+            $table->integer('semestre');
+
+            $table->primary(['code_etudiant', 'annee', 'semestre']);
         });
     }
 
@@ -31,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('failed_jobs');
+        Schema::dropIfExists('cesure');
     }
 };
