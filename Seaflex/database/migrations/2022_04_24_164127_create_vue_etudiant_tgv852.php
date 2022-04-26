@@ -14,6 +14,7 @@ return new class extends Migration
      */
     public function up()
     {
+        DB::statement('DROP VIEW IF EXISTS vueEtudiantTGV852');
         DB::statement("CREATE VIEW vueEtudiantTGV852 AS
                              SELECT *
                              FROM Seaflex.type

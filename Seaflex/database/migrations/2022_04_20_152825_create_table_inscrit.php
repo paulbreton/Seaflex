@@ -19,6 +19,7 @@ return new class extends Migration
             $table->integer('annee');
             $table->enum('semestre', ['pair', 'impair']);
             $table->boolean('valide');
+            $table->integer('tentative');
 
             $table->primary(['code_ue', 'code_etudiant', 'annee', 'semestre']);
 

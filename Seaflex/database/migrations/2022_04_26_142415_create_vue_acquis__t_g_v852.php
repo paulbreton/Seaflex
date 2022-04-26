@@ -14,11 +14,11 @@ return new class extends Migration
      */
     public function up()
     {
-        DB::statement('DROP VIEW IF EXISTS VueInscritsUnite;');
-        DB::statement('CREATE VIEW VueInscritsUnite AS
-                             SELECT code_ue, annee, count(code_etudiant) as nombreEtudiant
+        DB::statement('DROP VIEW IF EXISTS VueAcquisTGV852');
+        DB::statement("CREATE VIEW VueAcquisTGV852 AS
+                             SELECT *
                              FROM inscrit
-                             GROUP BY code_ue, annee');
+                             WHERE code_etudiant = 'TGV852' and tentative = 0");
     }
 
     /**
@@ -28,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        DB::statement('DROP VIEW IF EXISTS VueInscritsUnite;');
+        DB::statement('DROP VIEW IF EXISTS VueAcquisTGV852');
     }
 };
