@@ -30,17 +30,20 @@ return new class extends Migration
 
     private function createView() : string {
         return <<<SQL
-            create view vueModulePaire as
-            SELECT module.code,module.libellé, commentaire, impaire, paire FROM module
-            join ue_content on module.code = code_module
-            join ue on ue.code = code_ue
-            where paire = true;
+            create view vue2Cesure as
+            select nom, prenom, anneeCesure1, anneeCesure2 
+            from etudiant join (
+                SELECT c1.code_etudiant, c1.annee as anneeCesure1, c2.annee as anneeCesure2 
+                from cesure as c1 join cesure as c2 
+                where c1.code_etudiant = c2.code_etudiant and c1.semestre < c2.semestre
+                ) as c3 
+            on code = c3.code_etudiant;
         SQL;
     }
 
     private function dropView() : string {
         return <<<SQL
-            DROP VIEW IF EXISTS vueModulePaire;
+            DROP VIEW IF EXISTS vue2Cesure;
         SQL;
     }
 };
