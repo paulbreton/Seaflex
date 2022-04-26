@@ -16,14 +16,6 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-/*
-Route::get('/etudiants', [EtudiantController::class, 'index']);
-Route::get('/etudiants/{etudiant}', [EtudiantController::class, 'show']);
-
-Route::get('/ue', [UeController::class, 'index']);
-Route::get('/ue/{ue}', [UeController::class, 'show']);
-
-*/
 
 Route::get('/', function () {
     return view('index');
@@ -45,8 +37,5 @@ Route::get('/index', function () {
 });
 Route::get('/ue', function () {
     return view('listeUE');
-});
-Route::get('/imr', function () {
-    return view('imr');
 });
 Route::get('/views', [ViewsController::class, 'index']);
