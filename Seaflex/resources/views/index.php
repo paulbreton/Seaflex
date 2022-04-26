@@ -57,7 +57,7 @@
     <body>
 
         <div class="wrapper">
-            <img src="<?php echo asset('logo/seaflex.jpg') ?> " alt="description of myimage">
+            <img src="<?php echo asset('logo/seaflex.jpg') ?> " alt="Logo SeaFlex">
             <div id="formContent" class="buttonInd">
                 <a href="etudiants"><button class="btn btn-dark" type="button"><b>Liste des Etudiants</b></button>
                 <a href="add"><button class="btn btn-dark" type="button"><b>Ajouter des Etudiants</b></button>
